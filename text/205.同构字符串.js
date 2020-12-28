@@ -20,5 +20,5 @@ var isIsomorphic = function(s, t) {
    }
    return true;
 };
-// @lc code=end
 
+ 

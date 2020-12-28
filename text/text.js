@@ -1,34 +1,5 @@
-/**
- * @param {string} beginWord
- * @param {string} endWord
- * @param {string[]} wordList
- * @return {number}
- */
-const ladderLength = (beginWord, endWord, wordList) => {
-  const wordSet = new Set(wordList);
-  const queue = [];
-  queue.push([beginWord, 1]);
-
-  while (queue.length) {
-    const [word, level] = queue.shift();  // 当前出列的单词
-    if (word == endWord) {
-      return level;
-    }
-    for (let i = 0; i < word.length; i++) { // 遍历当前单词的所有字符
-      for (let c = 97; c <= 122; c++) { // 对应26个字母
-        const newWord = word.slice(0, i) + String.fromCharCode(c) + word.slice(i + 1); // 形成新词
-        if (wordSet.has(newWord)) { // 单词表里有这个新词
-          queue.push([newWord, level + 1]); // 作为下一层的词入列
-          wordSet.delete(newWord);  // 避免该词重复入列
-        }
-      }
-    }
-  }
-  return 0; // bfs结束，始终没有遇到终点
-};
-console.log(ladderLength(beginWord = "hit",
-  endWord = "cog",
-  wordList = ["hot", "dot", "dog", "lot", "log", "cog"]))
-
-
-  
+const {Heap}=require('lc-tool')
+const heap=new Heap()
+heap.insert(2)
+heap.topValue()
+console.log(heap.length)
