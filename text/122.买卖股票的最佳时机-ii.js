@@ -9,14 +9,14 @@
  * @param {number[]} prices
  * @return {number}
  */
-var maxProfit = function(prices) {
-    var  max=0
-    for(let i=1;i<=prices.length;i++){
-        if(prices[i]>prices[i-1]){
-          max += prices[i]- prices[i-1]
-        }
+var maxProfit = function (prices) {
+  var max = 0
+  for (let i = 1; i <= prices.length; i++) {
+    if (prices[i] > prices[i - 1]) {
+      max += prices[i] - prices[i - 1]
     }
-    return max
+  }
+  return max
 };
 // @lc code=end
-
+console.log(maxProfit(prices = [1, 3, 4, 5, 7]))
