@@ -9,21 +9,22 @@
  * @param {string} s
  * @return {number}
  */
-var titleToNumber = function(s) {
-   let sum = 0,
-     i = s.length - 1,
-     carry = 1;
+var titleToNumber = function (s='AB') {
 
-   while (i >= 0) {
-     let cur = s[i].charCodeAt() - 64;
+  let sum = 0,
+    i = s.length - 1,
+    carry = 1;
 
-     sum += cur * carry;
-     carry *= 26;
-     i--;
-   }
+  while (i >= 0) {
+    let cur = s[i].charCodeAt() - 64;
+    console.log(cur)
+    sum += cur * carry;
+    carry *= 26;
+    i--;
+  }
 
-   return sum;
-   
+  return sum;
+
 };
 // @lc code=end
-
+console.log(titleToNumber())
