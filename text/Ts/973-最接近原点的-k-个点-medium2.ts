@@ -4,7 +4,7 @@
  * [973] 最接近原点的 K 个点
  */
 
-import { Heap } from "./heap";
+import { Heap } from "../heap";
 
 //自己--优先队列-模版
 

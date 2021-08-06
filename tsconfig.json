@@ -75,5 +75,5 @@
    
           /* Disallow inconsistently-cased references to the same file. */
   },
-  "include": ["text/973-最接近原点的-k-个点-medium2.ts"]
+  "include": ["text/Ts/973-最接近原点的-k-个点-medium2.ts"]
 }
